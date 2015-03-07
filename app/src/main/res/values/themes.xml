@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="actionBarSize">@dimen/actionBarSize</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle</item>
+        <item name="actionOverflowButtonStyle">@style/ActionOverflowButtonStyle</item>
+        <item name="actionBarItemBackground">@drawable/selectable_background_nr_actionbar</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionModeCloseButtonStyle</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_nr_actionbar</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_nr_actionbar</item>
+        <item name="textAppearanceLargePopupMenu">@style/TextAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">@style/TextAppearanceSmallPopupMenu</item>
+        <item name="homeAsUpIndicator">@drawable/base_action_bar_back</item>
+        <item name="toolbarStyle">@style/ToolbarStyle</item>
+        <item name="popupMenuStyle">@style/PopupMenuStyle</item>
+        <item name="actionDropDownStyle">@style/ActionDropDownStyle</item>
+        <item name="dropDownListViewStyle">@style/DropDownListViewStyle</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="ActivityTheme" parent="@style/AppTheme">
+        <item name="android:windowAnimationStyle">@style/base_activity_animation</item>
+    </style>
+
+</resources>

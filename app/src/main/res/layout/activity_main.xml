@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:news="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="#fafafa" >
+
+                <ImageView
+                    android:id="@+id/tab_expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="15.0dip"
+                    android:paddingRight="15.0dip"
+                    android:src="@drawable/biz_news_column_edit_arrow_down" />
+
+                <com.shizy.news.view.PagerSlidingTabStrip
+                    android:id="@+id/tabStrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/tab_expand"
+                    android:textColor="#eb413d"
+                    android:textSize="15sp"
+                    news:pstsDividerWidth="0dp"
+                    news:pstsIndicatorHeight="2dp"
+                    news:pstsScrollOffset="25dp"
+                    news:pstsTabPaddingLeftRight="15dp"
+                    news:pstsUnderlineHeight="0dp" />
+            </RelativeLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/expand_top"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:background="#fafafa"
+                android:clickable="true"
+                android:visibility="invisible" >
+
+                <ImageView
+                    android:id="@+id/tab_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="15.0dip"
+                    android:paddingRight="15.0dip"
+                    android:src="@drawable/biz_news_column_edit_arrow_up" />
+
+                <TextView
+                    android:id="@+id/expand_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toLeftOf="@id/tab_collapse"
+                    android:gravity="left|center"
+                    android:text="20个未读栏目点击进入"
+                    android:textColor="#ff838383"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/expand_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#bbbbbb"
+                    android:gravity="center"
+                    android:text="显示栏目内容"
+                    android:visibility="invisible" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#ff333333" />
+
+    <LinearLayout
+        android:id="@+id/right_drawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="#ff333333"
+        android:orientation="vertical" />
+
+</android.support.v4.widget.DrawerLayout>
