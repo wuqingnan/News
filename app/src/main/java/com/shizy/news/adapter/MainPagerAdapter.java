@@ -4,7 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.shizy.news.fragment.SuperAwesomeCardFragment;
+import com.shizy.news.fragment.MaterialStyleFragment;
+import com.shizy.news.fragment.PullToRefreshFragment;
+import com.shizy.news.fragment.StoreHouseFragment;
 
 public class MainPagerAdapter extends FragmentPagerAdapter {
 
@@ -20,14 +22,21 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
 		return TITLES[position];
 	}
 
+    @Override
+    public Fragment getItem(int position) {
+        switch (position) {
+            case 0:
+                return StoreHouseFragment.newInstance(position);
+            case 1:
+                return MaterialStyleFragment.newInstance(position);
+            default:
+                return PullToRefreshFragment.newInstance(position);
+        }
+    }
+
 	@Override
 	public int getCount() {
 		return TITLES.length;
-	}
-
-	@Override
-	public Fragment getItem(int position) {
-		return SuperAwesomeCardFragment.newInstance(position);
 	}
 
 }

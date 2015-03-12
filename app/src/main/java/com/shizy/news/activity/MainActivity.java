@@ -1,12 +1,6 @@
 package com.shizy.news.activity;
 
-import java.lang.reflect.Field;
-
-import com.shizy.news.R;
-import com.shizy.news.Shakespeare;
-import com.shizy.news.adapter.MainPagerAdapter;
-import com.shizy.news.view.PagerSlidingTabStrip;
-
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
@@ -32,6 +26,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+
+import com.shizy.news.R;
+import com.shizy.news.Shakespeare;
+import com.shizy.news.adapter.MainPagerAdapter;
+import com.shizy.news.view.PagerSlidingTabStrip;
+
+import java.lang.reflect.Field;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -297,6 +298,11 @@ public class MainActivity extends ActionBarActivity {
 				long id) {
 			setTitle(Shakespeare.TITLES[position]);
 			mDrawerLayout.closeDrawer(mLeftDrawer);
+            switch (position) {
+                case 0:
+                    startActivity(new Intent(MainActivity.this, TestActivity.class));
+                    break;
+            }
 		}
 	}
 

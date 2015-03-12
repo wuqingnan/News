@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="google_colors">
+        <item>0xff0000</item>
+        <item>0x0000ff</item>
+        <item>0xffff00</item>
+        <item>0x00ff00</item>
+    </integer-array>
+</resources>
